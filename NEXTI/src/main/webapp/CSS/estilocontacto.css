@@ -1,0 +1,28 @@
+
+body {
+    background-color: #f8f9fa; /* Fondo gris claro */
+}
+
+h1 {
+    color: #ff6600; /* Color del texto principal en naranja */
+}
+
+.form-control {
+    border-color: #ff6600; /* Borde del campo de entrada en naranja */
+}
+
+.form-control:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25); /* Sombra naranja */
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    border-color: #ff6600;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+}
+

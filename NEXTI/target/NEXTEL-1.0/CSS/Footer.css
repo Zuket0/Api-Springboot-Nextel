@@ -1,0 +1,144 @@
+/*  FOOTER  */
+:root{
+     /* Colores */
+    --color-deseleccionado: #CCC;
+    --color-texto-principal: #fff;
+    --color-boton-hover-texto: #000;
+    --color-boton-hover-fondo: #fff;
+    --color-bg-oscuro-30: #303030;
+    --color-detalle-complementario: #dd8700;   
+}
+
+.containerr {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer {
+    background-color: #333;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: var(--color-texto-principal);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--color-detalle-complementario);
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 1em;
+    color: var(--color-deseleccionado);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-texto-principal);
+    padding-left: 8px;
+}
+
+.footer-col .rrss a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 2555, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--color-texto-principal);
+    transition: all 0.5s ease;
+}
+
+.footer-col .rrss a:hover {
+    color: var(--color-boton-hover-texto);
+    background-color: var(--color-boton-hover-fondo);
+    box-shadow: 0 0 10px rgba(255, 255, 2555, 0.5);
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* WHATSAPP FLOTANTE */
+
+.float{
+	position:fixed;
+	width:70px;
+	height:70px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+        font-size:40px;
+	box-shadow: 2px 2px 3px #999;
+        z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #FFF;
+        background-color:#1ab152;
+        animation: shake 1s;
+        animation-iteration-count: infinite;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+.pulse {
+	animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% { 
+	box-shadow: 0 0 0 0px #25d3664d; rgba(0, 0, 0, 0.2);
+   }
+  100% { 
+	box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+   }
+}

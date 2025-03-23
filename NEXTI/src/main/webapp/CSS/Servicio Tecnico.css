@@ -1,0 +1,120 @@
+@import url('https://fonts.cdnfonts.com/css/samsungone');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #e2e0e0;
+    font-family: 'open sans';
+    min-height: 100vh;
+}
+
+.support_container p , 
+.support_container h2 ,
+ .support_container h1 ,
+  .support_container a {
+    font-family: 'SamsungOne', sans-serif;
+}
+
+main {
+    min-height: 600px;
+    margin: 50px 0;
+    background:  #e2e0e0;
+}
+
+.cardTitle{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.arrow {
+    filter: invert(1);
+    padding-left: 5px;
+}
+.support_title {
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    text-align: center;
+    font-size: 38px;
+    margin: 0;
+    padding-bottom: 30px;
+}
+.support_container{
+    display: grid;
+    grid-template-columns: 33.3333333% 33.3333333% 33.3333333%;
+    grid-template-rows: auto;
+    margin: 0 10%;
+}
+
+.support_container p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.support_container > div {
+    position: relative;
+    height: 230px;
+    border: #000000 1px solid;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px 10px;
+    background-color: #e6c47b;
+}
+.support_container > div:hover {
+    z-index: 100;
+    animation: addHoverAnimation 0.3s ease-in-out forwards;
+}
+.support_container >div:not(:hover) {
+    animation: removeHoverAnimation 0.3s ease-in-out forwards;
+}
+.btnCell {
+    position: absolute;
+    height: 45px;
+    width: 50%;
+    background-color: #000000;
+    border-radius: 25px;
+    font-weight: bold;
+    bottom: 15px;
+    border: 0;
+    cursor: pointer;
+}
+.btnCell a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@keyframes addHoverAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px #000000bf;
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px 0px #000000bf;
+    }
+}
+@keyframes removeHoverAnimation {
+    0% {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px 0px #000000bf;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px #000000bf;
+    }
+}
+
+/* ============= MEDIA QUERIES ============= */
+
+@media (max-width: 1470px) {
+    .support_container{
+        grid-template-columns: 50% 50%;
+    }
+}
+@media (max-width: 768px) {
+    .support_container{
+        grid-template-columns: 100%;
+    }
+}

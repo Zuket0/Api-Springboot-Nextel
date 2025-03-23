@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="">
+  <Resource 
+      auth="Container" 
+      driverClassName="com.mysql.cj.jdbc.Driver" 
+      maxIdle="10" 
+      maxTotal="20" 
+      maxWaitMillis="-1" 
+      name="jdbc/nextel" 
+      password="" 
+      type="javax.sql.DataSource" 
+      url="jdbc:mysql://localhost:3306/nextel" 
+      username="root"/>
+</Context>

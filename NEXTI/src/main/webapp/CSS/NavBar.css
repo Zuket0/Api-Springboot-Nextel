@@ -1,0 +1,299 @@
+@import url('https://fonts.cdnfonts.com/css/samsungone');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria;
+    text-decoration: none;
+}
+
+/* Ajusta el espaciado para evitar que el contenido quede detrás del header */
+body {
+    padding-top: 80px; /* El valor debe ser igual a la altura del header */
+}
+
+.logo_container img {
+    height: 32px;    
+    width: 120px;
+}
+
+.logo_container {
+    width: auto;           /* Depende del contenido del logo */
+    text-align: center;    /* Centra el contenido si es necesario */
+}
+
+:root {
+    --naranja: #fa6a09;
+}
+
+/* Botón del menú hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* General (Pantallas Grandes - Desktop) */
+
+.HeaderNav {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior de la pantalla */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 1000; /* Mantén el header por encima de otros elementos */
+    background-color: #333; /* Fondo del header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional para el diseño */
+    padding: 20px 2%; /* Ajusta el espaciado interno del header */
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos estén bien distribuidos */
+    align-items: center;
+    box-sizing: border-box; /* Asegura que padding y border se consideren en el ancho */
+}
+
+
+.HeaderNav .navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #dfe2df;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.HeaderNav .navbar a:hover {
+    color: var(--naranja);
+    font-weight: bold;
+}
+
+.HeaderNav .navbar a::after {
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.1s ease;
+}
+
+.HeaderNav .navbar a:hover::after {
+    opacity: 1;
+}
+
+.HeaderNav .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre iconos */
+}
+
+.HeaderNav .navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    gap: 20px; /* Espaciado entre elementos del menú */
+}
+
+.container img {
+    max-width: 100%;
+    height: auto; /* Mantiene las proporciones originales de la imagen */
+    display: block; /* Elimina espacios adicionales alrededor de la imagen */
+}
+
+/* Estilo del icono de persona */
+.user-icon {
+    font-size: 24px;  
+    color: white; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-icon:hover {
+    transform: scale(1.2);
+    color: var(--naranja);
+}
+
+/* Estilo del contenedor de iconos */
+.icons {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+/* CART  */
+
+.Carritox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Carritox i {
+    font-size: 24px;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.Carritox i:hover {
+    transform: scale(1.3);
+    color: var(--naranja);
+}
+
+    
+    /* Media Query (Pantallas Pequeñas - Mobile) */
+@media (max-width: 1120px) {
+    .menu-toggle{
+        font-size: 28px;
+        color: white;
+        display: block;
+        cursor: pointer;
+        margin-right: 30px; /* Espacio entre el menú y el carrito */
+        transition: transform 0.3s ease;
+    }
+
+    .menu-toggle:hover{
+        transform: scale(1.3);
+        color: var(--naranja);
+    }
+    
+    .navbar {
+        display: none; /* Ocultar el menú inicialmente */
+        flex-direction: column;
+        align-items: center;
+        background-color: #333; /* Fondo del menú desplegable */
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Aparece debajo del header */
+        left: 0;
+        z-index: 1000;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a {
+        color: white;
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+    
+    .HeaderNav {
+        flex-direction: row;  /* Mantén los elementos en fila */
+        padding: 18px 2%; /* Ajusta el espaciado para pantallas pequeñas */
+        justify-content: space-between; /* Mantener distribución entre elementos del header */
+    }
+
+    .logo_container {
+        flex: 1; /* Ocupa el espacio necesario para empujar los otros elementos */
+        text-align: left; /* Alinea el logo hacia la izquierda */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Coloca los enlaces en una columna */
+        align-items: center; /* Centra los enlaces */
+        gap: 10px; /* Espaciado entre enlaces */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Tamaño más pequeño en móvil */
+    }
+
+    .menu-toggle,
+    .Carritox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Carritox {
+        margin-left: auto; /* Asegura que el carrito esté a la derecha */
+    }
+}
+
+/* MENU DESPLEGABLE */
+
+.user-menu {
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+    height: 40px;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    max-width: 250px;
+    width: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    right: 0; /* Asegura que el menú no se salga de la pantalla */
+    left: auto; /* Desactiva cualquier alineación izquierda */
+    top: 100%; /* Justo debajo del icono */
+    margin-top: 10px; /* Espaciado del icono */
+    z-index: 100;
+    padding: 10px;
+    text-align: left; /* Asegura que el texto se alinee bien */
+}
+/* Cuando el menú se active con JavaScript */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Hover para enlaces */
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Estilo especial para "Cerrar sesión" */
+.dropdown-menu .logout {
+    color: red;
+    font-weight: bold;
+}
+
+.dropdown-menu .logout:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: 'SamsungOne', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover para el botón de inicio de sesión */
+.login-button:hover {
+    color: #fa6a09;
+    border-color: #fa6a09;
+    transform: scale(1.1);
+    text-decoration: none !important;
+}

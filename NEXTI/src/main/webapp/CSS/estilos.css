@@ -1,0 +1,398 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/***estilos.css***/
+
+.carousel {
+    max-height: 600px; /* Ajusta la altura máxima que desees */
+    overflow: hidden; /* Oculta cualquier contenido que exceda la altura */
+}
+
+.carousel-item img {
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 600px; /* Ajusta la altura máxima de las imágenes */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    
+}
+
+.contenedor h2, .contenedor h3, .contenedor h4{
+    font-weight: bold;
+}
+
+.tabla {
+    text-align: center;
+    padding: 15px;
+    border-color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+th {
+    padding: 20px;
+    text-align: center;
+}
+  
+.title {
+    font-size: 20pt;
+    color: white; 
+    padding: 10px;
+}
+  
+.label {
+    font-size: 20pt;
+    color: white;
+}
+
+.contenedor{
+    width: 100%;
+    max-width:900px;
+    margin: auto;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 75%;
+    padding: 40px;
+    margin-bottom: 80px; 
+}
+
+.tabla{
+    width: 33%;
+    height: 550px;
+    margin: auto;
+    border:1px solid #343759;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px  #343759;
+    padding: 60px;
+    text-align: center;
+    flex-grow: 1;
+    color: #343759;
+}
+
+.tabla>h2{
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.tabla img{
+    width: 64px;
+    margin-bottom:35px;
+}
+
+.tabla > h3{
+    font-size:30px;
+    margin-bottom: 20px;
+}
+
+.tabla > p{
+    display: block;
+    margin-bottom:20px;
+}
+
+.boton{
+    display:inline-block;
+    width: 150px;
+    padding:12px;
+    background: #a5f059;
+    text-decoration: none;
+    color: #343759;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.tabla:hover{
+    background: #343759;
+    color: #f1f1f2;
+    transition: .5s all;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .tabla{
+        width: 45%;
+        max-width:none;
+        margin-bottom: 40px;
+        flex-grow: initial;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .tabla{
+        width: 45%;
+        padding:30px;
+    }
+    .tabla > h2{
+        margin-top:40px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .tabla{
+        width: 85%;
+        padding: 20px;
+    }
+}
+
+/* PRODUCTOS STYLE */
+
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    gap: 20px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-items {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+/* Estilos de los productos */
+.item {
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.5s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.info-curso {
+    padding: 15px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-curso h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.info-curso p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.info-curso .Price {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.info-curso button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-curso button:hover {
+    background-color: #b4b5b6;
+}
+
+.Pagi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinea horizontalmente desde el inicio */
+    align-items: flex-start; /* Alinea verticalmente desde el inicio */
+    padding: 50px 120px 20px 50px;
+    gap: 1.5rem; /* Mantiene espacio entre elementos */
+}
+
+
+/* Estilo del filtro */
+
+.filter-category form{
+    padding: 10px 50px 10px 50px;
+    border: 1px solid #bbb8b8;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters {
+    align-self: flex-start; /* Coloca el filtro al inicio de la columna */
+    
+}
+
+.Columna {
+    flex: 1; /* Ocupa el espacio restante */
+    margin-top: 1rem; /* Deja espacio entre filtros y contenido principal */
+    
+}
+
+.filter-type {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.filters h2{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    font-family: "Poppins", serif;
+}
+
+.filters-category h3{
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+}
+
+.filter-category label{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.filter-category span{
+    font-size: 16px;
+    font-family: "Poppins", serif;
+}
+
+.filters label input{
+    margin: 0;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+input[type="checkbox"]{
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.collection {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén dispuestos de arriba a abajo */
+    gap: 20px; /* Espacio entre el título y los productos */
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre el título y el selector */
+    align-items: center; /* Alinea verticalmente */
+    
+}
+
+.sort-options {
+    margin-top: 10px; /* Separación entre el título y el select */ 
+}
+
+.options h2, .options label{
+    font-family: "Poppins", serif;
+}
+
+.sort-select {
+    font-family: "Poppins", serif;
+}
+
+.sort-select option {
+    font-family: "Poppins", serif;
+}
+
+/* BUSCADOR */
+
+
+.container-search {
+    width: 100%;
+    max-width: 1210px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.search-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: "Poppins", serif;
+}
+
+button {
+    background-color: #fa6a09;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button i {
+    font-size: 16px;
+}
+
+.container-suggestions {
+    position: absolute;
+    top: calc(100% + 4px); /* Posiciona justo debajo del input */
+    left: 0;
+    width: calc(100% - 50px); /* Ajusta el ancho al tamaño del input excluyendo el botón */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.container-suggestions li:hover {
+    background-color: #f0f0f0;
+}

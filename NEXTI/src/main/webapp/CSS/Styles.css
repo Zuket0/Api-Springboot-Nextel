@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria;
+    text-decoration: none;
+}
+
+body {
+    display: center;
+    justify-content: center;
+    align-items: center;
+    background: #e2e0e0;
+    font-family: 'open sans';
+}   
+
+:root {
+    --naranja: #fa6a09;
+}
+
+.SubmitEnvi {
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #333;
+    color: #FFFFFF;;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.SubmitEnvi:hover {
+    background: #e15101;
+    transform: translateY(-2px);
+}
+
+/* POLITICS.HTML */
+
+/* Estilos Generales */
+
+main{
+    background: #e2e0e0;
+    min-height: calc(100vh - 100px); /*Calcula para ajustarse al tamño de la pantalla*/
+}
+
+/* Contenedor Principal */
+.Parrafos {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+/* Encabezados */
+.Parrafos h1 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.Parrafos h2 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #555;
+    font-weight: bold;
+}
+
+.Parrafos h3 {
+    font-family: Arial, sans-serif;
+    margin-top: 25px;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Párrafos */
+.Parrafos p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+/* Enlaces */
+.Parrafos a {
+    font-family: Arial, sans-serif;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.Parrafos a:hover {
+    text-decoration: underline;
+}
+
+/*  Trabaja con nosotros */
+
+.Work {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: flex-start; /* Alinea el contenido al inicio horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: left; /* Alinea el texto de los párrafos a la izquierda */
+    max-width: 900px; /* Limita el ancho del contenido para mantenerlo compacto */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px; /* Agrega espacio interno */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+.Work h1 {
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    text-align: left; /* Alinea el título a la izquierda */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    margin-bottom: 20px; /* Agrega espacio debajo del título */
+    font-size: 2rem; /* Ajusta el tamaño de fuente del título */
+}
+
+.Work p {
+    margin-bottom: 15px; /* Espaciado entre los párrafos */
+}
+
+.Work iframe {
+    align-self: center; /* Centra el iframe dentro del contenedor flex */
+    width: 100%; /* Ajusta el ancho del iframe al contenedor */
+    max-width: 900px; /* Limita el ancho máximo del iframe */
+    height: 450px; /* Ajusta la altura para hacerlo más grande */
+    margin-top: 20px; /* Agrega espacio superior para separar el iframe */
+    border: none; /* Remueve el borde predeterminado del iframe */
+}
+
+/*
+    Trabaja con nosotros - Beneficios
+*/
+
+/* sección de beneficios */
+.beneficios {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 40px 20px; /* Espaciado interno */
+    margin: 20px auto; /* Separación con otras secciones */
+    text-align: center; /* Centra el texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 1000px; /* Ancho máximo */
+}
+
+.beneficios h2 {
+    font-size: 2rem; /* Tamaño del título */
+    color: #fa6a09; /* Color característico de Nextel */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-weight: bold; /* Negrita */
+}
+
+.beneficios ul {
+    list-style: none; /* Elimina los puntos por defecto */
+    padding: 0; /* Sin espaciado interno */
+    margin: 0; /* Sin márgenes */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+.beneficios li {
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 200px; /* Ancho fijo para cada beneficio */
+    text-align: center; /* Centra el contenido */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    display: flex;
+    flex-direction: column; /* Ordena verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.beneficios li i {
+    font-size: 2rem; /* Tamaño del icono */
+    color: #fa6a09; /* Color del icono */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.beneficios li:hover {
+    transform: translateY(-10px); /* Eleva el beneficio */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Contenedor principal una o mas secciones */
+.section-container {
+    max-width: 1000px; /* Mismo ancho para ambas */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px; /* Espaciado interno */
+}
+
+.postula img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* No permite que la imagen sea más grande que el contenedor */
+}
+
